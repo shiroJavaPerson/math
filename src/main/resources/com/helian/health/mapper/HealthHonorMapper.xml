@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.helian.health.mapper.HealthHonorMapper" >
+  <resultMap id="BaseResultMap" type="com.helian.health.domain.honor.HealthHonor" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="type" property="type" jdbcType="CHAR" />
+    <result column="required" property="required" jdbcType="INTEGER" />
+    <result column="img_url" property="imgUrl" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="is_show" property="isShow" jdbcType="CHAR" />
+    <result column="not_finished_img_url" property="notFinishedImgUrl" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.helian.health.mapper.HealthHonorInfoMapper">
+    <resultMap id="BaseResultMap" type="com.helian.health.domain.honor.HealthHonorInfo">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="user_id" property="userId" jdbcType="VARCHAR"/>
+        <result column="honor_id" property="honorId" jdbcType="INTEGER"/>
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
+    </resultMap>
+    <resultMap id="HonorMap" type="com.helian.health.domain.honor.HealthHonor">
+        <id column="honor_id" property="id" jdbcType="INTEGER"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="type" property="type" jdbcType="INTEGER"/>
+        <result column="required" property="required" jdbcType="INTEGER"/>
+        <result column="img_url" property="imgUrl" jdbcType="VARCHAR"/>
+        <result column="not_finished_img_url" property="notFinishedImgUrl" jdbcType="VARCHAR"/>
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="is_show" property="isShow" jdbcType="VARCHAR"/>
+        <result column="reward_type" property="rewardType" jdbcType="INTEGER"/>
+        <result column="reward_value" property="rewardValue" jdbcType="INTEGER"/>
+        <result column="description" property="description" jdbcType="VARCHAR"/>
+    </resultMap>
+    <resultMap id="HonorInfoMap" type="com.helian.health.domain.honor.HealthHonorInfo">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="user_id" property="userId" jdbcType="VARCHAR"/>
+        <association property="healthHonor" resultMap="HonorMap"/>
+    </resultMap>
+</mapper>

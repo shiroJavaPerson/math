@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.helian.health.mapper.HomeModuleMapper" >
+  
+  <resultMap id="HomeModuleMap" type="com.helian.health.domain.HomeModule" >
+  	<id column="id" property="id" javaType="long" jdbcType="INTEGER" />
+  	<result column="module_level" property="module_level" jdbcType="INTEGER" javaType="int"/>
+  	<result column="module_name" property="module_name" jdbcType="VARCHAR" javaType="string"/>
+  	<result column="img_url" property="img_url" jdbcType="VARCHAR" javaType="string"/>
+  	<result column="home_page_img_url" property="home_page_img_url" jdbcType="VARCHAR" javaType="string"/>
+  	<result column="app_version" property="app_version" jdbcType="VARCHAR" javaType="string"/>
+  	<result column="app_type" property="app_type" jdbcType="INTEGER" javaType="int"/>
+  	<result column="parent_id" property="parent_id" jdbcType="INTEGER" javaType="long"/>
+  	<result column="module_order" property="module_order" jdbcType="INTEGER" javaType="int"/>
+  	<result column="recommend_order" property="recommend_order" jdbcType="INTEGER" javaType="int"/>
+  	<result column="home_page_order" property="home_page_order" jdbcType="INTEGER" javaType="int"/>
+  	<result column="is_third" property="is_third" jdbcType="INTEGER" javaType="int"/>
+  	<result column="is_h5" property="is_h5" jdbcType="INTEGER" javaType="int"/>
+  	<result column="h5_url" property="h5_url" jdbcType="VARCHAR" javaType="string"/>
+  	<result column="native_id" property="native_id" jdbcType="INTEGER" javaType="int"/>
+  	<result column="isdelete" property="isdelete" jdbcType="INTEGER" javaType="int"/>
+  </resultMap>
+
+
+</mapper>
